@@ -1,0 +1,11 @@
+{
+    "timeZone": "Asia/Hong_Kong",
+    "dependencies": {
+    },
+    "webapp": {
+      "access": "ANYONE",
+      "executeAs": "USER_ACCESSING"
+    },
+    "exceptionLogging": "STACKDRIVER",
+    "oauthScopes": ["https://www.googleapis.com/auth/gmail.modify", "https://www.googleapis.com/auth/script.scriptapp", "https://www.googleapis.com/auth/userinfo.email"]
+  }
