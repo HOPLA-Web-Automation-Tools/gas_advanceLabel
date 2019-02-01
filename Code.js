@@ -6,6 +6,20 @@ var last_run = userProperties.getProperty("last_run") || "";
 
 var user_email = Session.getEffectiveUser().getEmail();
 
+global.doGet = doGet;
+global.default_action = default_action;
+global.deleteAllTriggers = deleteAllTriggers;
+global.test = test;
+global.main_trigger = main_trigger;
+global.do_it_now = do_it_now;
+global.main_doLabel = main_doLabel;
+global.regex_subscription = regex_subscription;
+global.markLabel = markLabel;
+global.archive = archive;
+global.threadHasLabel = threadHasLabel;
+global.isMe = isMe;
+global.getEmailAddresses = getEmailAddresses;
+global.getLabel = getLabel;
 
 function default_action() {
   deleteAllTriggers();
@@ -19,7 +33,7 @@ function default_action() {
 
   return HtmlService.createHtmlOutput(content);
 }
-global.doGet = doGet;
+
 function doGet(e) {
   if (e.parameter.setup) { // SETUP
     return default_action();
@@ -75,9 +89,8 @@ function deleteAllTriggers() {
   // DELETE ALL TRIGGERS***
 }
 
-function teest() {
+function test() {
   Logger.log(labels);
-  //  userProperties.setProperty('labels', '{"my label":{"labelname":"my label","filters":["available"],"status":"enabled","frequency":"10","use_regex":false,"case_sensitive":false}}');
 }
 
 function main_trigger() {
